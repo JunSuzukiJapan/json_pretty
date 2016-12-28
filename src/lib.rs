@@ -1,3 +1,5 @@
+use std::fmt;
+
 #[derive(Debug)]
 pub struct PrettyFormatter {
     string: String,
@@ -118,6 +120,12 @@ impl PrettyFormatter {
         }
 
         result
+    }
+}
+
+impl fmt::Display for PrettyFormatter {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+        write!(f, "{}", self.pretty())
     }
 }
 
