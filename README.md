@@ -1,6 +1,6 @@
 # json_pretty
 
-Json prettifier for Rust language.
+Simple Json prettifier for Rust language.
 
 # Example
 
