@@ -1,0 +1,6 @@
+[package]
+authors = ["Jun Suzuki <jun.suzuki.japan@gmail.com>"]
+name = "json_pretty"
+version = "0.1.0"
+
+[dependencies]
