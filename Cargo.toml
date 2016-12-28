@@ -2,5 +2,10 @@
 authors = ["Jun Suzuki <jun.suzuki.japan@gmail.com>"]
 name = "json_pretty"
 version = "0.1.0"
+repository = "https://github.com/JunSuzukiJapan/json_pretty"
+keywords = ["util", "json"]
+license-file = "License"
+readme = "README.md"
+description = "Json prettifier for Rust language."
 
 [dependencies]

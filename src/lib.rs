@@ -126,19 +126,14 @@ mod tests {
     fn test_pretty_formatter() {
         use super::PrettyFormatter;
 
-        let s = r#"{
-                "description": "string for test",
-                "id" : 123,
-                "true" : true,
-            }
-        "#;
+        let s = r#"{"description": "string for test", "id" : 123, "true" : true}"#;
         let formatter = PrettyFormatter::from_str(s);
         let result = formatter.pretty();
         println!("s: {}", result);
         assert_eq!(r#"{
   "description": "string for test",
   "id" : 123,
-  "true" : true,
+  "true" : true
 }"#, result);
     }
 }
