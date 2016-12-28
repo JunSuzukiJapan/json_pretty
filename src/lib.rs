@@ -51,6 +51,7 @@ impl PrettyFormatter {
                 },
                 '}' => {
                     if !in_string {
+                        result.push('\n');
                         indent -= self.indent;
                         if need_indent {
                             for _ in 0..indent {
