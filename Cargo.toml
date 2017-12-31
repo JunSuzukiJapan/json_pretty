@@ -1,7 +1,7 @@
 [package]
 authors = ["Jun Suzuki <jun.suzuki.japan@gmail.com>"]
 name = "json_pretty"
-version = "0.1.1"
+version = "0.1.2"
 repository = "https://github.com/JunSuzukiJapan/json_pretty"
 keywords = ["util", "json"]
 license-file = "License"
