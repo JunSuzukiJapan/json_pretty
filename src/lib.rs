@@ -55,11 +55,8 @@ impl PrettyFormatter {
                     if !in_string {
                         result.push('\n');
                         indent -= self.indent;
-                        if need_indent {
-                            for _ in 0..indent {
-                                result.push(' ');
-                            }
-                            need_indent = false;
+                        for _ in 0..indent {
+                            result.push(' ');
                         }
                     }
                     result.push('}');
@@ -135,14 +132,17 @@ mod tests {
     fn test_pretty_formatter() {
         use super::PrettyFormatter;
 
-        let s = r#"{"description": "string for test", "id" : 123, "true" : true}"#;
+        let s = r#"{"description": "string for test", "id" : 123, "true" : true, "nest": { "foo" : "bar"}}"#;
         let formatter = PrettyFormatter::from_str(s);
         let result = formatter.pretty();
         println!("s: {}", result);
         assert_eq!(r#"{
   "description": "string for test",
   "id" : 123,
-  "true" : true
+  "true" : true,
+  "nest": {
+    "foo" : "bar"
+  }
 }"#, result);
     }
 }
